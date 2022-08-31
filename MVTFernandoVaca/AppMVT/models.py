@@ -4,6 +4,11 @@ from django.db import models
 
 class Familia(models.Model):
     DNI=models.IntegerField()
-    nombre=models.CharField(max_length=30)
-    parentezco=models.CharField(max_length=30)
-    fecha_de_cumpleaños=models.DateField()
+    nombre=models.CharField(max_length=50)
+    parentezco=models.CharField(max_length=50)
+    #fecha_de_cumpleaños=models.DateField()
+
+    def __str__(self):
+        return str(self.DNI)+" "+self.nombre+" "+self.parentezco
+    
+
